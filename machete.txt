@@ -1,0 +1,21 @@
+django
+web-reehm
+
+python -m venv reehm
+
+reehm\Scripts\activate
+
+python -m pip install --upgrade pip
+
+pip install -r requirements.txt
+
+runas /noprofile /user:Administrator cmd
+
+
+C:\Users\yakar\OneDrive\Proyectos\Prog\Web-Django
+
+reehm\Scripts\activate
+
+python manage.py runserver
+
+http://127.0.0.1:8000/

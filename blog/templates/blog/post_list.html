@@ -1,7 +1,7 @@
 {% load static %}
 <html>
     <head>
-        <title>Blog de la REEHM</title>
+        <title>Red de Estudios y Experiencias en y desde el Heavy Metal</title>
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="page-header">
-            <h1><a href="/">Blog de la REEHM</a></h1>
+            <h1><a href="/">REEHM</a></h1>
         </div>
 
         <div class="content container">
@@ -18,6 +18,7 @@
                     {% for post in posts %}
                         <div class="post">
                             <div class="date">
+                                <p>Autorx: {{ post.author }}</p>
                                 <p>publicado: {{ post.published_date }}</p>
                             </div>
                             <h2><a href="">{{ post.title }}</a></h2>

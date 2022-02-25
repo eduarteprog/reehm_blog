@@ -43,4 +43,3 @@ pip3.6 install --user pythonanywhere
 pa_autoconfigure_django.py --python=3.6 https://github.com/eduarteprog/reehm_blog.git
 
 
-

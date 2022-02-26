@@ -55,3 +55,6 @@ workon eduarte.pythonanywhere.com
 
 python manage.py makemigrations
 python manage.py migrate
+
+
+git commit -m "Se agregaron que muestre las direcciones url en formato slug."

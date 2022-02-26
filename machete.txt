@@ -52,3 +52,6 @@ git pull
 workon eduarte.pythonanywhere.com
 (eduarte.pythonanywhere.com)$ python manage.py collectstatic
 
+
+python manage.py makemigrations
+python manage.py migrate

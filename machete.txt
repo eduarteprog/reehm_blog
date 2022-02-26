@@ -43,3 +43,12 @@ pip3.6 install --user pythonanywhere
 pa_autoconfigure_django.py --python=3.6 https://github.com/eduarteprog/reehm_blog.git
 
 
+
+PythonAnywhere command-line
+https://eduarte.pythonanywhere.com/
+cd ~/eduarte.pythonanywhere.com
+git pull
+
+workon eduarte.pythonanywhere.com
+(eduarte.pythonanywhere.com)$ python manage.py collectstatic
+

@@ -10,3 +10,4 @@ reehm/Scripts/*
 *.code-workspace
 *.xls
 *.py[oc]
+.env

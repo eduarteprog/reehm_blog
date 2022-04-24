@@ -5,3 +5,7 @@ myvenv
 db.sqlite3
 /static
 .DS_Store
+reehm/Lib/*
+reehm/Scripts/*
+*.code-workspace
+*.xls

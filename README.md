@@ -30,3 +30,4 @@ Para ejecutar la aplicación con su db deben ejecutar el comando `docker-compose
 1. Acceder a la imagen: `docker-compose exec web bash`
 1. Correr migraciones: `docker-compose up migrate`
 1. Correr shell django: `docker-compose exec web ./manage.py shell_plus`
+1. Crear Super Usuario para admin: `docker-compose exec web ./manage.py createsuperuser`

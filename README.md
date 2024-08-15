@@ -31,3 +31,7 @@ Para ejecutar la aplicación con su db deben ejecutar el comando `docker-compose
 1. Correr migraciones: `docker-compose up migrate`
 1. Correr shell django: `docker-compose exec web ./manage.py shell_plus`
 1. Crear Super Usuario para admin: `docker-compose exec web ./manage.py createsuperuser`
+
+## Acceder a la app
+
+Para acceder a la app hay que entrar por navegador a `localhost:8000`, al admin `localhost:8000/admin`

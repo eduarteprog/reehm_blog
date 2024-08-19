@@ -18,11 +18,14 @@
                       <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                       </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="{% static "publicaciones/Disonancias_del_Metal_01.pdf" %}">Publicaciones</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="{% static "publicaciones/Disonancias_del_Metal_02.pdf" %}">Publicaciones</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Publicaciones
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% static "publicaciones/Disonancias_del_Metal_01.pdf" %}">01</a></li>
+                            <li><a class="dropdown-item" href="{% static "publicaciones/Disonancias_del_Metal_02.pdf" %}">02</a></li>
+                        </ul>
                     </li>
                     </ul>
                   </div>

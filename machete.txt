@@ -62,3 +62,4 @@ git commit -m "Se agregaron que muestre las direcciones url en formato slug."
 git commit -m "Se actualizó el pdf con la geo referencia"
 
 git commit -m "Se actualizó el pdf con ISSN"
+

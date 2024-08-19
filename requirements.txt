@@ -1,3 +1,6 @@
-Django==4.0.2
+Django==5.1
+django-jazzmin
 python-slugify==6.1.0
 django-environ==0.8.1
+django-extensions
+mysqlclient

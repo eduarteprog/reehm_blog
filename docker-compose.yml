@@ -1,0 +1,24 @@
+services:
+  db:
+    image: mariadb:11
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: reehm
+      MARIADB_USER: reehm
+      MARIADB_PASSWORD: reehm
+  web:
+    build: .
+    image: reehm-web
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  migrate:
+    image: reehm-web
+    command: python manage.py migrate
+    volumes:
+      - .:/app
+    depends_on:
+      - db

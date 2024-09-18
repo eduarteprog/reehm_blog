@@ -1,0 +1,104 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block title %}
+    ¿Quiénes somos?
+{% endblock %}
+
+{% block content %}
+    <style>
+        .team-container {
+            background-color: #000000; 
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .team-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .history-section {
+            margin-bottom: 60px;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .team-member {
+            text-align: center;
+            width: 200px;
+        }
+
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #fff;
+        }
+
+        .member-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .member-bio {
+            font-size: 16px;
+        }
+    </style>
+
+    <div class="team-container">
+        <h1 class="team-title">¿Qué es la REEHM?</h1>
+
+        <div class="history-section">
+            <p>
+                REEHM es una iniciativa dedicada a la promoción de la diversidad y la inclusión en la escena metalera
+                latinoamericana. Nacida en el año [Año de Fundación], nuestro objetivo ha sido siempre el de generar
+                un espacio seguro y respetuoso para todos los participantes, con un especial énfasis en visibilizar
+                las voces y experiencias de las mujeres, personas trans, y otros grupos marginados dentro de la cultura
+                metal.
+            </p>
+            <p>
+                A lo largo de los años, hemos trabajado incansablemente para fomentar la reflexión colectiva y la
+                acción comunitaria, organizando rondas de brujxs, charlas y publicaciones que abordan temas de género,
+                raza, clase y más. Nuestro equipo está conformado por personas apasionadas y comprometidas con esta
+                causa, quienes día a día trabajan para hacer del metal un espacio más inclusivo para todxs.
+            </p>
+        </div>
+
+        <div class="team-members">
+            <div class="team-member">
+            <img src="{% static 'images/banner.png' %}" alt="Descripción de la imagen">
+
+                <div class="member-name">Eduardo</div>
+                <div class="member-bio">
+                    "El Heavy mi vida, Iorio mi pasión, pero siempre escuche los CD´s de los BSB de mi hermana a escondidas."
+                </div>
+            </div>
+
+            <div class="team-member">
+                <img style= "border-radius: 50%" src="{% static 'images/imagen1.png' %}" alt="Descripción de la imagen">
+
+                <div class="member-name">Cosme Fulanito</div>
+                <div class="member-bio">
+                    Escritor, se inició en el heavy.. bla bla bla.
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

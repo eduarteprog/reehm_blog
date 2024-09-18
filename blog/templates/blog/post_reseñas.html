@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="section-title">{{ posts.first.get_section_display }}</h1>
+
+    <div class="row">
+        {% for post in posts %}
+        <div class="col-md-6">
+            <div class="post mb-4 p-3" style="background-color: #f0f0f0; border-radius: 8px; overflow: hidden;">
+                {% if post.image %}
+                <div class="post-image position-relative" style="height: 40vh; overflow: hidden;">
+                    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid w-100 h-100" style="object-fit: cover; max-height: 40vh;">
+                    <h2 class="post-title position-absolute" style="bottom: 10px; left: 10px; color: white; background-color: rgba(0, 0, 0, 0.5); padding: 5px; border-radius: 5px;">
+                        <a href="{% url 'post_detail' slug=post.slug %}" style="color: white; text-decoration: none;">{{ post.title }}</a>
+                    </h2>
+                </div>
+                {% endif %}
+                <div class="post-details mt-2">
+                    <p class="post-meta">Por: <b>{{ post.author }}</b></p>
+                    <p class="post-excerpt">{{ post.text|truncatewords:40 }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

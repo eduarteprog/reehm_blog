@@ -1,13 +1,100 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <div class="post">
-        {% if post.published_date %}
-            <div class="date">
-                {{ post.published_date }}
-            </div>
-        {% endif %}
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.text|linebreaksbr }}</p>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        line-height: 1.6;
+        background-color: #000000; 
+        
+    }
+
+    .titulo_nota {
+        text-align: center;
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .post-info {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #666;
+    }
+
+    .image-main, .image-secondary img {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        height: auto; 
+    }
+
+    .text-content {
+        padding: 20vh;
+        position: relative;
+    }
+
+    .text-section {
+        padding-bottom: 20px; 
+        text-align: justify; 
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>
+
+<h1 class="titulo_nota">{{ post.title }}</h1>
+<p class="post-info">Sección: {{ post.get_section_display }} | Fecha: {{ post.date_published|date:"d/m/Y" }} | Autor: {{ post.author }}</p>
+
+{% if post.image %}
+    <img src="{{ post.image.url }}" alt="Imagen principal" class="image-main">
+{% endif %}
+
+<div class="text-content">
+    <!-- Primer tercio -->
+    <div class="text-section">
+        {% for paragraph in part1 %}
+            <p>{{ paragraph }}</p>
+        {% endfor %}
     </div>
+
+    <!-- Imagen secundaria 1 -->
+    {% if post.image_2 %}
+        <div class="image-secondary">
+            <img src="{{ post.image_2.url }}" alt="Imagen secundaria 1">
+        </div>
+    {% endif %}
+
+    <!-- Segundo tercio -->
+    <div class="text-section">
+        {% for paragraph in part2 %}
+            <p>{{ paragraph }}</p>
+        {% endfor %}
+    </div>
+
+    <!-- Imagen secundaria 2 -->
+    {% if post.image_3 %}
+        <div class="image-secondary">
+            <img src="{{ post.image_3.url }}" alt="Imagen secundaria 2">
+        </div>
+    {% endif %}
+
+    <!-- Tercer tercio -->
+    <div class="text-section">
+        {% for paragraph in part3 %}
+            <p>{{ paragraph }}</p>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Imagen secundaria 3 -->
+{% if post.image_4 %}
+    <div class="image-secondary">
+        <img src="{{ post.image_4.url }}" alt="Imagen secundaria 3">
+    </div>
+{% endif %}
 {% endblock %}

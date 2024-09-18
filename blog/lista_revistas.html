@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Revistas</title>
+</head>
+<body>
+    <h1>Revistas Subidas</h1>
+    <ul>
+        {% for revista in revistas %}
+        <li>
+            <h2>{{ revista.titulo }}</h2>
+            <img src="{{ revista.imagen.url }}" alt="Imagen de {{ revista.titulo }}" style="width:200px;">
+            <p><a href="{{ revista.archivo_pdf.url }}">Descargar PDF</a></p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

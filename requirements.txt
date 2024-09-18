@@ -4,3 +4,4 @@ python-slugify==6.1.0
 django-environ==0.8.1
 django-extensions
 mysqlclient
+Pillow

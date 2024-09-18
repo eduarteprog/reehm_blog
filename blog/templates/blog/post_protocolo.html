@@ -1,0 +1,272 @@
+{% extends "blog/base.html" %}
+
+{% block title %}
+    ¿Quiénes somos?
+{% endblock %}
+
+{% block content %}
+    <style>
+        body {
+            background-color: #000000; 
+        }
+
+        .moving-phrases {
+            position: relative;
+            height: 95%;
+            width: 300%;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .moving-text {
+            position: relative;
+            white-space: normal;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: rgb(253, 209, 15);
+        }
+        
+        @keyframes fade-out {
+            0% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        .moving-text {
+                animation: fade-out 10s ease-in-out infinite, 
+                            move-text-1 10s linear infinite;
+        }        
+
+        @keyframes move-text-1 {
+            0% {
+                transform: translateY(50%);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+
+        .moving-text-2 {
+                animation: move-text-2 14s linear infinite,
+                            fade-out 13s ease-in-out infinite; 
+        }
+
+        @keyframes move-text-2 {
+            0% {
+                transform: translateX(100%); 
+            }
+            70% {
+                transform: translateX(0%); 
+            }
+            30% {
+                transform: translateX(0%); 
+            }
+            100% {
+                transform: translateX(-100%); 
+            }
+        }
+
+        .moving-text-3 {
+    animation: move-text-3 20s linear infinite, 
+               fade-out 13s ease-in-out infinite; 
+        }
+
+        @keyframes move-text-3 {
+        0% {
+                transform: translateX(-100%); 
+        }
+        70% {
+                transform: translateX(0%); 
+        }
+        30% {
+                transform: translateX(0%); 
+        }
+        100% {
+                transform: translateX(100%); 
+        }
+        }
+
+
+        .moving-text-4 {
+                animation: fade-out 20s ease-in-out infinite,
+                            move-text-4 10s linear infinite;
+        }
+
+        @keyframes move-text-4 {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(100%);
+            }
+        }
+
+        /* Efecto de ondas sonoras */
+        .sound-waves {
+            position: absolute;
+            bottom: 50%;
+            left: 130%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .sound-wave {
+            width: 4px;
+            height: 20px;
+            background-color: white;
+            animation: wave 1.5s ease-in-out infinite;
+        }
+
+        .sound-wave:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .sound-wave:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .sound-wave:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .sound-wave:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .sound-wave:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+        .sound-wave:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+        .sound-wave:nth-child(7) {
+            animation-delay: 0.4s;
+        }
+        .sound-wave:nth-child(8) {
+            animation-delay: 0.8s;
+        }
+        .sound-wave:nth-child(9) {
+            animation-delay: 0.5s;
+        }
+        .sound-wave:nth-child(10) {
+            animation-delay: 0.3s;
+        }
+        .sound-wave:nth-child(11) {
+            animation-delay: 0.5s;
+        }
+        .sound-wave:nth-child(12) {
+            animation-delay: 0.7s;
+        }
+        .sound-wave:nth-child(13) {
+            animation-delay: 0.8s;
+        }
+        .sound-wave:nth-child(14) {
+            animation-delay: 0.7s;
+        }
+        .sound-wave:nth-child(15) {
+            animation-delay: 0.4s;
+        }
+        .sound-wave:nth-child(16) {
+            animation-delay: 0.2s;
+        }
+        .sound-wave:nth-child(17) {
+            animation-delay: 0.3s;
+        }
+        .sound-wave:nth-child(18) {
+            animation-delay: 0.6s;
+        }
+        .sound-wave:nth-child(19) {
+            animation-delay: 0.5s;
+        }
+        .sound-wave:nth-child(20) {
+            animation-delay: 0.6s;
+        }
+        .sound-wave:nth-child(21) {
+            animation-delay: 0.7s;
+        }
+        .sound-wave:nth-child(22) {
+            animation-delay: 0.9s;
+        }
+
+
+        @keyframes wave {
+            0%, 100% {
+                transform: scaleY(0.3);
+            }
+            50% {
+                transform: scaleY(1);
+            }
+        }
+    </style>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title text-center">Nuestra Propuesta</h1>
+                        <p class="card-text mt-4">
+                            Desde la Comisión de género de la REEHM creímos necesario realizar un documento que intente 
+                            informar, prevenir y atender situaciones violentas concretas y simbólicas por motivos de género, 
+                            orientación sexual, raza, clase y edad en prácticas vinculadas al metal.
+                        </p>
+                        <p class="card-text mt-3">
+                            En este sentido, proponemos en esta oportunidad un ejercicio reflexivo colectivo sobre y desde 
+                            las experiencias de cada une para poner en diálogo diversas problemáticas. De esta manera, 
+                            elaborar de forma colaborativa un protocolo que sirva como herramienta de acción al interior de 
+                            la escena metal latinoamericana.
+                        </p>
+                        <p class="card-text mt-3">
+                            Búscanos en nuestras redes para enterarte de nuestras rondas de brujxs. Por una escena más 
+                            segura para todxs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 position-relative">
+                <div class="moving-phrases">
+                    <p class="moving-text moving-text-1">"CUANDO COMENCÉ A IR A LOS RECITALES, TENÍA QUE RENDIR UN EXAMEN SOBRE LAS BANDAS QUE ESCUCHABA"</p><br>
+                    <p class="moving-text moving-text-2">"CON MIS AMIGAS CAMINAMOS UNA DETRÁS DE LA OTRA EN LAS FECHAS PARA QUE NO NOS TOQUEN EL CULO O NOS APOYEN"</p>
+                    <br> <br> <br>
+                    <p class="moving-text moving-text-3">"NO VOY A LOS RECITALES PORQUE NO SIENTO QUE SEA UN AMBIENTE SEGURO PARA UNA MUJER TRANS, ES MUY MACHISTA"</p><br><br>
+                    <p class="moving-text moving-text-4">"CUANDO SOS MÚSICA, TENÉS QUE SER DOBLEMENTE BUENA PARA QUE NO TE CUESTIONEN"</p>
+                </div>
+                <div class="sound-waves">
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                    <div class="sound-wave"></div>
+                                                 
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

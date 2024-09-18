@@ -1,0 +1,56 @@
+body {
+    background-color: #000000;
+    color: #ffffff; 
+}
+
+.page-header {
+    background-color: #C25100;
+    margin: 0;
+    padding: 0;
+}
+
+.page-header h1, 
+.page-header h1 a, 
+.page-header h1 a:visited, 
+.page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar .container-fluid {
+    padding: 0;
+}
+
+.navbar-nav .nav-item .nav-link {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+}
+
+.navbar-brand {
+    font-size: 20pt;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.5rem;
+}
+
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}

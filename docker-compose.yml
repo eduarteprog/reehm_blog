@@ -6,6 +6,10 @@ services:
       MARIADB_DATABASE: reehm
       MARIADB_USER: reehm
       MARIADB_PASSWORD: reehm
+    healthcheck:
+      test: ["CMD", "mariadb", "-h", "localhost", "-u", "root", "-proot", "-e", "SELECT 1"]
+      timeout: 20s
+      retries: 10
   web:
     build: .
     image: reehm-web
@@ -14,11 +18,13 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - db
+      db:
+        condition: service_healthy
   migrate:
     image: reehm-web
     command: python manage.py migrate
     volumes:
       - .:/app
     depends_on:
-      - db
+      db:
+        condition: service_healthy
